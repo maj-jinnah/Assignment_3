@@ -1,0 +1,83 @@
+{% extends "base.html" %} {% load static %} {% block style_css %}
+<link rel="stylesheet" href="{%static 'CSS/home.css'%}" />
+{% endblock style_css %} {% block content %}
+
+<div class="homepage">
+    <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="true"
+    >
+        <div class="carousel-indicators">
+            <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+            ></button>
+            <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+            ></button>
+            <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+            ></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static "Images/food1.jpg" %}" class="d-block w-100"
+                alt="..." />
+            </div>
+            <div class="carousel-item">
+                <img src="{% static "Images/food1.jpg" %}" class="d-block w-100"
+                alt="..." />
+            </div>
+            <div class="carousel-item">
+                <img src="{% static "Images/food1.jpg" %}" class="d-block w-100"
+                alt="..." />
+            </div>
+        </div>
+        <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+        >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+        >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+{% endblock content %} {% block homecontent %}
+<div class="text mt-5 mx-auto">
+    <h1 class="mb-3">
+        Wellcome to <span class="text-success">Panda Reataurant</span>
+    </h1>
+    <p>
+        Welcome to Panda, a new restaurant in Dhaka! Our place is super cool
+        with tasty food from different parts of Asia. We've got yummy Sichuan
+        dishes and awesome sushi. The place looks amazing too, with a mix of
+        modern style and Asian vibes. We're here to make you feel at home and
+        give you the best time with your friends and family. Whether it's a
+        quick lunch or a big celebration, Panda is all about good food and good
+        times. So, come on over and let's make some tasty memories together!
+    </p>
+</div>
+{% endblock homecontent %}

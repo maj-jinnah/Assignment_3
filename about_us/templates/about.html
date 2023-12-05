@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% load static %} {% block style_css %}
+<link rel="stylesheet" href="{%static 'CSS/about.css'%}" />
+{% endblock style_css %} {% block content %}
+<div class="mt-5 container d-flex justify-content-center align-items-center flex-column ">
+    <img class='img' src="{% static "Images/about_us.jpg" %}" alt="About Us
+    Photo">
+    <h1 class="mt-5">About <span class="text-success">Panda Reataurant</span></h1>
+    <p class="text-center mt-3">
+        Panda is not just a restaurant; it's an odyssey for the senses. The
+        menu, curated with precision and passion, showcases a symphony of
+        Asian-inspired dishes that celebrate the rich tapestry of flavors from
+        across the continent. From the tantalizing Sichuan delicacies to the
+        delicate artistry of sushi, each dish is a testament to our commitment
+        to authenticity and innovation.
+    </p>
+</div>
+{% endblock content %}

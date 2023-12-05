@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        {% for item in data.categories %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img
+                    src="{{ item.strCategoryThumb }}"
+                    class="card-img-top"
+                    alt="{{ item.strMeal }}"
+                />
+                <div class="card-body">
+                    <p class="card-text">Meal ID: {{ item.idCategory }}</p>
+                    <h5 class="card-title">{{ item.strCategory }}</h5>
+                    <p class="card-text"> Description: {{ item.strCategoryDescription|truncatewords:10 }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}
